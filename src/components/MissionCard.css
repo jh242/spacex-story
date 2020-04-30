@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: start;
     width: 600px;
+    margin-right: 25px;
+    margin-left: 25px;
     height: 100%;
     max-height: 100%;
-    margin: 50px;
     animation: appearance 1s 1;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .launchCard p{
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     color: white;
 }
@@ -40,7 +41,7 @@
 }
 
 .landCard p{
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     color: black;
 }
