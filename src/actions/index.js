@@ -1,20 +1,18 @@
-export const REQUEST_LAUNCHES = 'REQUEST_LAUNCHES';
+export const FETCH_MISSIONS = 'FETCH_MISSIONS';
 export const CHANGE_DISPLAY = 'CHANGE_DISPLAY';
 
-export function fetchLaunches(){
-    return{
-        type: 'FETCH_LAUNCHES'
+export function fetchMissions(fetchResponse) {
+    return {
+        type: FETCH_MISSIONS,
+        payload: {
+            missions: fetchResponse.missions,
+            error: fetchResponse.error
+        }
     }
 }
 
-export function changeDisplay(displayMode){
-    return{
-        type: 'CHANGE_DISPLAY',
-        display: displayMode
+export function changeDisplay() {
+    return {
+        type: CHANGE_DISPLAY
     }
-}
-
-export const DisplayModes = {
-    LAUNCHES: 'LAUNCHES',
-    LANDINGS: 'LANDINGS'
 }

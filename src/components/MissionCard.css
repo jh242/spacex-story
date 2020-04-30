@@ -1,0 +1,38 @@
+.missionCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 50px;
+    height: 100%;
+}
+
+.launchCard {
+    width: 100%
+}
+
+.launchCard h5{
+    text-align: center;
+    color: white;
+}
+
+.launchCard p{
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+.landCard {
+    width: 100%
+}
+
+.landCard h5{
+    text-align: center;
+    color: black;
+}
+
+.landCard p{
+    font-size: 12px;
+    text-align: center;
+    color: black;
+}
