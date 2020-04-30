@@ -2,9 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
-    padding: 50px;
+    justify-content: start;
+    width: 600px;
     height: 100%;
+    max-height: 100%;
+    margin: 50px;
+    animation: appearance 1s 1;
+}
+
+@keyframes appearance {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .launchCard {

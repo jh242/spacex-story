@@ -1,6 +1,6 @@
 .launch {
   display: flex;
-  overflow: hidden;
+  overflow-y: hidden;
   height: 100vh;
   width: 100vw;
   background-color: #22272B;
@@ -9,7 +9,7 @@
 
 .land {
   display: flex;
-  overflow: hidden;
+  overflow-y: hidden;
   height: 100vh;
   width: 100vw;
   background-color: #FFF1E0;

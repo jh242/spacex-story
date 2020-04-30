@@ -3,12 +3,13 @@ import './App.css';
 
 import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 import { fetchMissions, changeDisplay } from './actions';
 import MissionPanel from './components/MissionPanel';
 
 async function fetchData() {
-    const resp = await fetch('https://api.spacexdata.com/v3/launches?limit=5&launch_year=2019');
+    const resp = await fetch('https://api.spacexdata.com/v3/launches');
     const data = await resp.json();
 
     return { missions: data, error: !resp.ok }
@@ -17,6 +18,7 @@ async function fetchData() {
 function App() {
     const dispatch = useDispatch();
     const mode = useSelector(state => state.displayMode);
+    const fetching = useSelector(state => state.missionData.isFetching);
 
     fetchData().then(fetchResponse => {
         dispatch(fetchMissions(fetchResponse));
@@ -24,14 +26,24 @@ function App() {
 
     let className = mode ? 'launch' : 'land'
 
-    return (
-        <div className={className}>
-            <div className='modeGroup'>
-                <Button style={{ width: '100px', margin: '10px' }} variant={mode ? 'light' : 'dark'} onClick={() => dispatch(changeDisplay())}>{mode ? 'Landings' : 'Launches'}</Button>
+    if (fetching) {
+        return (
+            <div className='launch' style={{ alignItems: 'center', justifyContent: 'center' }}>
+                <Spinner animation='grow' variant='light' />
+                <Spinner animation='grow' variant='light' />
+                <Spinner animation='grow' variant='light' />
             </div>
-            <div style={{ flex: 1 }}><MissionPanel /></div>
-        </div >
-    );
+        );
+    } else {
+        return (
+            <div className={className}>
+                <div className='modeGroup'>
+                    <Button style={{ width: '100px', margin: '10px' }} variant={mode ? 'light' : 'dark'} onClick={() => dispatch(changeDisplay())}>{mode ? 'Landings' : 'Launches'}</Button>
+                </div>
+                <div style={{ flex: 1 }}><MissionPanel /></div>
+            </div >
+        );
+    }
 }
 
 export default App;
