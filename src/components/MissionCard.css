@@ -21,6 +21,7 @@
 }
 
 .launchCard h5{
+    margin: 5px;
     text-align: center;
     color: white;
 }
@@ -29,6 +30,7 @@
     font-size: 11px;
     text-align: center;
     color: white;
+    margin: 2px;
 }
 
 .landCard {
@@ -36,6 +38,7 @@
 }
 
 .landCard h5{
+    margin: 5px;
     text-align: center;
     color: black;
 }
@@ -44,4 +47,5 @@
     font-size: 11px;
     text-align: center;
     color: black;
+    margin: 2px;
 }
