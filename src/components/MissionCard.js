@@ -49,7 +49,10 @@ export default class MissionCard extends Component {
                             {mission.launch_success ?
                                 <p>Launched successfully at {mission.launch_date_utc} from {mission.launch_site.site_name_long}</p>
                                 :
-                                <p>{mission.launch_failure_details ? `Launch failed due to ${mission.launch_failure_details.reason} at ${mission.launch_failure_details.time} seconds.` : 'Launch failed, details unavailable.'}</p>
+                                mission.upcoming ?
+                                    <p>Mission planned to launch at {mission.launch_date_utc} from {mission.launch_site.site_name_long}</p>
+                                    :
+                                    <p>{mission.launch_failure_details ? `Launch failed due to ${mission.launch_failure_details.reason} at ${mission.launch_failure_details.time} seconds.` : 'Launch failed, details unavailable.'}</p>
                             }
                         </div>
                         :
