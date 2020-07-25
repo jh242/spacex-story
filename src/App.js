@@ -4,6 +4,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
+import HorizontalScroll from 'react-scroll-horizontal';
 
 import { fetchMissions, changeDisplay } from './actions';
 import MissionPanel from './components/MissionPanel';
@@ -36,11 +37,14 @@ function App() {
         );
     } else {
         return (
+            
             <div className={className}>
                 <div className='modeGroup'>
                     <Button style={{ width: '100px', margin: '10px' }} variant={mode ? 'light' : 'dark'} onClick={() => dispatch(changeDisplay())}>{mode ? 'Landings' : 'Launches'}</Button>
                 </div>
-                <div style={{ flex: 1 }}><MissionPanel /></div>
+                <HorizontalScroll reverseScroll>
+                    <div style={{ flex: 1 }}><MissionPanel /></div>
+                </HorizontalScroll>
             </div >
         );
     }

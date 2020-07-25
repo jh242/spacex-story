@@ -29,7 +29,7 @@ export default class MissionCard extends Component {
                 <div style={{ height: '100px', marginTop: '5%' }}>
                     <img style={{ maxHeight: '100px', maxWidth: '100px' }} src={mission.links.mission_patch_small} />
                 </div>
-                <img style={{ maxHeight: '60%', marginTop: '5%', marginBottom: '5%', objectFit: 'contain' }} src={rocketDisplay} />
+                <img style={{ maxHeight: '60vh', marginTop: '5%', marginBottom: '5%', objectFit: 'contain' }} src={rocketDisplay} />
                 <div className={mode ? 'launchCard' : 'landCard'}>
                     <h5 style={{ color: textColor }}>{mission.mission_name}</h5>
                     {mode ?

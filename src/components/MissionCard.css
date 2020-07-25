@@ -6,7 +6,7 @@
     width: 600px;
     margin-right: 25px;
     margin-left: 25px;
-    height: 100%;
+    height: auto;
     max-height: 100%;
     animation: appearance 1s 1;
 }
