@@ -20,6 +20,7 @@
   position: absolute;
   width: 120px;
   height: 70px;
+  z-index: 10;
 }
 
 @keyframes launchToLand {
