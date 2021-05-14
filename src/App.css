@@ -1,38 +1,138 @@
+body {
+  background: #22272B;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+span {
+  color: #005288;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  width: 800px;
+  max-width: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navItem {
+  width: 33%;
+  height: 100%;
+  border-radius: 2%;
+  transition: background-color 200ms ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+
+.navItem img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.navItem h2 {
   color: white;
+  bottom: 0;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.navItem:hover {
+  background-color: #181C1F;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.half {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5%;
+  overflow: auto;
+}
+
+.patch {
+  width: 250px;
+  height: 250px;
+  margin: 20px auto;
+}
+
+.grid {
+  grid-template-columns: 2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.grid img {
+  width: 50%;
+  transition: opacity 200ms ease-out;
+}
+
+.grid img:hover {
+  opacity: 80%;
+}
+
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: background-color 200ms ease-out;
+}
+
+.back:hover {
+  background-color:#181C1F;
+}
+
+.ant-collapse {
+  background: initial;
+  border: initial;
+  margin-bottom: 10px;
+}
+
+.ant-collapse-header {
+  color: white !important;
+  transition: background-color 200ms ease-out;
+  border-radius: 5px !important;
+}
+
+.ant-collapse-header:hover {
+  background-color: #181C1F
+}
+
+.ant-collapse-item {
+  border: none !important;
+}
+
+.ant-collapse-content {
+  background: initial;
+  border: none;
+  color: white !important;
+}
+
+.ant-collapse-content p {
+  margin: 5px 0;
 }
