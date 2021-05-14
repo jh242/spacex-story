@@ -15,4 +15,4 @@ A list of significant libraries I'm using to make this possible:
 
 All data provided by the [open source SpaceX API](https://github.com/r-spacex/SpaceX-API)
 
-Made in 2020 by Jack Hu
+Updated in 2021 by Jack Hu
